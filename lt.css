@@ -1,0 +1,206 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans, sans-serif;
+  background-color: #f5f5f7;
+}
+
+#container {
+  max-width: 900px; 
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  background-color: #ffffff;
+}
+
+#introContainer {
+  font-size: 14px;
+}
+
+#introContainer h2 {
+  font-size: 24px;
+}
+
+
+#goalInput {
+  display: none; 
+}
+
+#goalDisplay {
+  display: none; 
+}
+
+#goalButtonContainer {
+  display: none; 
+}
+
+#indicatorsContainer {
+  display: none;
+}
+
+#widgetContainer {
+  display: none;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  vertical-align: middle;
+}
+
+#widget {
+  width: 48%;
+  float: left;
+  padding: 2% 1% 2% 1%;
+  vertical-align: middle;
+}
+
+/* Goal input textarea */
+#textLearnerGoal {
+  font-size: 14px;
+}
+
+/* Goal button selection 
+TODO:optimise the indicators and goal button selection - same style
+*/
+
+.goalButton {
+	background-color:#b1b7c2;
+	border-radius:15px;
+	border:1px solid #81848b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size:15px;
+  margin: 1% 0 2% 0;
+	padding:8px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #555658;
+}
+
+.selectedGoalButton {
+  background-color:#6fa7dc;
+	border-radius:15px;
+	border:1px solid #81848b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size:15px;
+  margin: 1% 0 2% 0;
+	padding:8px 25px;
+	text-shadow:0px 1px 0px #555658;
+	position:relative;
+}
+
+/* ===================== */
+/* Indicator selection */
+
+#indicatorList {
+  text-align: center;
+}
+
+.indicator {
+  width: 47%;
+  padding: 1% 1% 1% 1%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.indicatorExplanation{
+  width: 90%;
+  overflow-wrap: break-word;
+  font-size: small;
+  font-weight: 200;
+  padding: 1% 1% 1% 1%;
+  display: inline-block;
+  position: relative;
+}
+
+.indicatorsButton {
+  background-color:#b1b7c2;
+	border-radius:15px;
+	border:1px solid #81848b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size:15px;
+  margin: 1% 0 2% 0;
+	padding:8px 25px;
+	text-shadow:0px 1px 0px #555658;
+}
+
+.selectedIndicatorsButton {
+  background-color:#6fa7dc;
+	border-radius:15px;
+	border:1px solid #81848b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size:15px;
+  margin: 1% 0 2% 0;
+	padding:8px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #555658;
+	position:relative;
+}
+}
+
+#message {
+  margin: 3% 0 0 0;
+}
+
+/* ===================== */
+/* Legend = indicator explanantion panel next to the widget */
+
+#legend {
+  width: 48%;
+  height: 90%;
+  float: right;
+  vertical-align: middle;
+}
+
+.explainedIndicator {
+  padding: 1% 0;
+  text-align: left;
+}
+
+.indicatorTitle {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ============================== */
+/* Update widget */
+
+
+.updateIndicatorsButton {
+	background-color:#6fa7dc;
+	border-radius:15px;
+	border:1px solid #81848b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size:15px;
+  margin: 1% 0 2% 0;
+	padding:8px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #555658;
+	position:relative;
+}
+
+/* ===================== */
+/* ===================== */
+
+/* Customisation hide button */
+
+#hideLegendButton {
+  background-color: #6fa7dc;
+  border-radius: 15px;
+  border:1px solid #81848b;
+  padding: 8px 10px;
+  color: #ffffff;
+  cursor:pointer;
+  float: right;
+  font-size: 12px;
+  text-shadow:0px 1px 0px #555658;
+  text-align: center;
+}
