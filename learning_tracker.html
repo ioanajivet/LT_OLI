@@ -1,0 +1,268 @@
+<!-- Widget scripts -->
+
+
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  
+<head>
+      <link href='lt.css' rel='stylesheet' type='text/css'>
+      <link href='pretty_checkbox.css' rel='stylesheet' type='text/css'>
+      <link href='jquery-ui.css' rel='stylesheet' type='text/css'>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="app.js"></script>
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="consentContainer">
+      <h3>Invitation to participate in the research study <i>My learning dashboard</i></h3>
+      <p>We are constantly trying to improve your learning experience while on this platform and to
+        better support you in achieving your goals. <b>Through this study, we wish to evaluate the
+        impact of a learning analytics feedback tool that offers you personalised feedback on your
+        learning progress and learning behaviour.</b> This study is part of a collaboration between 
+        Erasmus University of Rotterdam, TU Delft and Open University of the Netherlands.</p>
+        <!-- 
+          TODO: update text with this being a collaboration between OU/TUD/EUR.
+          TODO: add the  -->
+      <p>If you wish to participate, <b>we need your permission</b>. Participation is voluntary and it will
+        not affect your ability to participate in the course. The study will take place over the whole
+        duration of the course meaning that you will have access to the feedback tool until the end of
+        the course. Please, note you will not receive any compensation for participating in the study,
+        but you will help us advance research in this domain. You can stop your study participation at
+        any time without giving a reason by sending us an email (contact details below). Upon your
+        request to terminate your participation in the study, you will not have access to the feedback
+        tool anymore and we will remove your data from our research dataset.</p>
+      <h4>Data collection and processing</h4>
+        <p>For this study, we will collect data about:</p>
+        <ul> 
+          <li>Your interaction with the course activities - we will use this data to generate your
+        personalised feedback that will be displayed on the feedback tool.</li>
+          <li>Interaction with the feedback tool - we will use this data to analyse when and how the
+        tool was used by learners so that we can improve the tool in future iterations.</li>
+          <li>Survey answers - At the beginning of the course, we will ask you to answer a
+        questionnaire that reflects your self-assessment on self-regulated learning. At the end of the
+        course, we will ask you to evaluate the feedback tool used during the course. Filling out
+        the surveys will require 10-20 minutes of your time.</li>
+          <li>Demographic data - We do not collect this demographic data but we will retrieve it from
+        Coursera and include it in our dataset: age, gender, the highest level of education graduated
+        and country.</li>
+        </ul>
+      <h4>Your rights, privacy and security</h4>
+        <p>According to the European General Data Protection Regulation (GDPR), you can request the
+        deletion of your data. Upon your request, we will remove all your data from the dataset used
+        in our research. To exercise this right, please contact the research team before the end of the
+        course mentioning your username used on the Coursera platform (contact details below). At the
+        end of the course, all collected data will be anonymised, making it impossible to identify you
+        within our dataset anymore. The collected data will be used only for research purposes and
+        only the research team will have access to the data. Bounded by the GDPR, your personal
+        data will not be disclosed or shared with other parties without additional consent. The
+        anonymised dataset will be stored for the next ten years as required for scientific research.</p>
+        
+      <h4>Contact information</h4>
+        Please contact us if you have any questions related to your participation in the study.
+        Contact: Ioana Jivet - i.jivet@tudelft.nl , Hendrik Drachsler - hendrik.drachsler@ou.nl</p>
+
+        <p><b>By agreeing to participate you indicate that you have read and understood this text,
+          that you are 17 years of age or older, you know the Open University of the
+          Netherlands stores the research data for 10 years, that you have given your consent
+          freely, that you know you can end the study without reason and that you consent to
+          use your data, which will be collected, for scientific research.</b> Please indicate whether
+          or not you agree to participate in this research study by clicking one of the buttons below.</p>
+
+        <div id="followUpForm">
+          <div class="pretty p-default p-curve">
+            <input type="checkbox" id="followUpCheckBox" />
+            <div id="follow-up-label" class="state p-primary">
+              <label>I agree to be contacted for future studies.</label>
+            </div>
+          </div>
+          <div id="emailBox">
+            <input type="email" id="email" name="email" placeholder="Please enter your email here...">
+          </div>
+        </div>
+
+      <div id="consentButtonsContainer">
+        <button id="agreeConsentButton" class='widgetButton'>I wish to participate</button>
+        <button id="rejectConsentButton" class='widgetButton'>I do not wish to participate</button>
+      </div>
+
+    </div>  <!-- end consentContainer-->
+    
+    <div id="goodByeMessage">
+      <h3>Goodbye!</h3> 
+      <p>We are sorry to see you go. As of now, we will not show you the feedback dashboard and we will not include your data into our research dataset.</p>
+      <p>If you have any questions, please contact us at <a href="mailto:i.jivet@tudelft.nl">i.jivet@tudelft.nl</a> or <a href="mailto:hendrik.drachsler@ou.nl">hendrik.drachsler@ou.nl</a>.</p>
+    </div>
+
+    <div id="introContainer">
+      <h2>My learning dashboard</h2>
+      <div id='introConfigure'><p>Learning with a MOOC can be challenging. This tool supports you to achieve your goals. Here you can (1) actively set your goal for this course and (2) select indicators to monitor your progress towards your goal.</p></div>
+      <div id='introDisplay'><p>This visualization reminds you of your course goal, shows you your learning behaviour and allows you to improve your study plan each week. You can adjust the indicators weekly.</p></div>
+    </div>
+
+    <div id="goalsContainer">
+
+      <div id="goalPrompt">
+        <h3>What do you want to achieve by the end of this course?</h3>
+        <p>Some examples for a goal are learning specific topics covered by the course, completing the course and getting a certificate, completing all activities in the course in a certain timeframe, dedicating 3 hours weekly to this course, etc. </p>
+          <div id="goalInput">
+            <textarea id='textLearnerGoal' rows = "4" placeholder="Enter your goal here... "></textarea>
+          </div>
+      </div>
+      
+      <div id="goalDisplay">
+        <h3>What I want to achieve by the end of the course:</h3>
+        <div id="quotedGoal">
+          <blockquote class='goalQuote'></blockquote>
+        </div>
+      </div>
+      <div id="goalButtonContainer">
+          <button id="goalButton" class='widgetButton' disabled>Save goal</button>
+      </div>
+
+      <div id="updateGoalButtonContainer">
+        <button id="saveNewGoalButton" class='widgetButton'>Update goal</button>
+        <button id="cancelNewGoalButton" class='widgetButton'>Cancel</button>
+    </div>
+    </div>
+    
+    <div id="indicatorsContainer">
+      <div id="indicatorInstruction">
+        <h3>How would you like to monitor progress towards this goal?</h3>
+        <p>You can choose between three and six indicators. You can change them at the beginning of every week. Hover over each indicator to show its description.</p>
+      </div>
+      <div id="indicatorList"></div>
+      <div id="indicatorsMessageBox">
+          <div class="messageBox">
+            <div id="indicatorsMessage" class="message"></div>
+          </div>
+      </div>
+      <div id='indicatorButtonContainer'>
+        <button id="indicatorsButton" class='widgetButton disabledButton' title='Select minimum 3 indicators.'> Save indicators </button>
+      </div>
+      <div id='updateIndicatorsButtonContainer'>
+        <button id="saveNewIndicatorsButton" class='widgetButton'> Save new indicators </button>
+        <button id="cancelNewIndicatorsButton" class='widgetButton'> Cancel </button>
+      </div>
+    </div>
+
+    <div id="widgetSection">
+      <div id="widgetIntro">
+        <h3>My outcomes and learning behaviour since the beginning of the course:</h3>
+        <p>Hover over the points on the chart to get more information.</p>
+      </div>
+      
+      <div id="widgetContainer">
+        <div id="widget"></div>
+        <div id='buttonContainer'>
+          <button id='updateGoalButton' class='widgetButton disabledButton' title="You can change your goal next week.">Change goal</button>
+          <div style="clear:both;"></div>
+          <button id='updateIndicatorsButton' class='widgetButton disabledButton' title="You can change your indicators next week.">Change indicators</button>
+          <div style="clear:both;"></div>
+          <button id='legendButton' class='widgetButton'>Show explanations</button>
+          <div style="clear:both;"></div>
+          <button id='FAQButton' class='widgetButton'>Open FAQ</button>
+        </div>
+      </div>
+    </div>
+
+    <div id='explanationsContainer'>
+      
+      <div id="legend">
+        <h3>What do these indicators show?</h3>
+        <div id="selectedExplanations"></div>
+      </div>
+
+      <div id="FAQContainer">
+        <h3>Do you have any questions?</h3>
+        <p>Click on the questions listed below to show the answer.</p>
+        <div id='question_0' class='question'>How is this dashboard useful to me?</div>
+        <div id='answer_0' class='answer'>
+          <p>Learning with a MOOC can be challenging. This tool supports you to achieve your goals. You can (1) actively set your goal for this course and (2) select feedback indicators and monitor your progress towards your goal.</p>  
+        </div>
+        <div id='question_1' class='question'>How can I change my goal and my feedback indicators?</div>
+        <div id='answer_1' class='answer'>
+          <p>You can adjust your goal and feedback indicators once per week. The buttons are enabled at the beginning of each week and stay enabled until you adjust your goal or feedback indicators.</p>  
+        </div>
+        <div id='question_2' class='question'>Why can't I choose less than 3 or more than 6 indicators?</div>
+        <div id='answer_2' class='answer'>
+          <p>Limiting the number of indicators between 3 and 6, can give you plenty of information without overloading you with data.</p>
+        </div>
+        <div id='question_3' class='question'>Where do these feedback indicators come from?</div>
+        <div id='answer_3' class='answer'>
+          <p>The 12 feedback indicators you can choose from were selected from research literature. They all support goal achievement.</p>
+        </div>
+        <div id='question_4' class='question'>How are the feedback indicators calculated?</div>
+        <div id='answer_4' class='answer'>
+          <p>The values of the feedback indicators are calculated using all your activity data from the beginning of the course. The values of the indicators are updated daily.</p>
+        </div>
+        <div id='question_5' class='question'>Is my feedback real-time?</div>
+        <div id='answer_5' class='answer'>
+          <p>The values shown on the dashboard are updated once per day.</p>
+        </div>
+        <div id='question_6' class='question'>What data do you use to calculate the feedback indicators?</div>
+        <div id='answer_6' class='answer'>
+          <p>The feedback indicators are calculated using Coursera data that records your activitiy on this course pages.</p>
+        </div>
+        <div id='question_7' class='question'>I have other questions.</div>
+        <div id='answer_7' class='answer'>
+          <p>For further questions or if you wish to give us feedback, please get in touch with us at i.jivet@tudelft.nl.</p>
+        </div>
+      </div>
+
+      <div style="clear:both;"></div>
+
+    </div>
+
+    <div id="surveySection">
+      <h3>Self-regulated learning (SRL) questionnaire</h3>
+      <div id="surveyIntro">
+        <p>Help our research and fill out the SRL questionnaire. The questionnaire assesses four self-regulated learning skills in relation to this course: time management, help-seeking, goal setting and self-evaluation and will not take more than 10 minutes.</p>
+      </div>
+      <div id="openSRLSurveyButton">
+        <button id='openSRLButton' class='widgetButton'>Fill out the SRL survey</button>
+      </div>
+      
+      <div id="surveyContainer">
+        <p>How much do the statements below apply to your learning for this course? </p>
+        <table id="SRLTable">
+          <tr>
+            <th class="tc-item"></th>
+            <th class="tc-scale-title">
+              <div id="srl-scale-min">Not at all true for me</div>
+              <div id="srl-scale-max">Very true for me</div>
+            </th>
+          </tr>
+        </table>
+
+        <div id="SRLMessageBox">
+          <div class="messageBox">
+            <div id="SRLMessage" class="message"></div>
+          </div>
+        </div>
+
+        <div id='surveyButtonContainer'>
+          <button id="saveSurveyButton" class='widgetButton surveyButton'> Submit </button>
+          <!-- <button id="resetSurveyButton" class='widgetButton surveyButton'> Reset </button> -->
+          <button id="cancelSurveyButton" class='widgetButton surveyButton'> Cancel </button>
+        </div>
+      </div>
+
+      <div id="SRLThanksMessage">
+        <p>Thank you for filling out the self-regulated learning questionnaire.</p>
+        <p> If you wish to get in contact with us, please reach out to us at <a href="mailto:i.jivet@tudelft.nl">i.jivet@tudelft.nl</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<footer>
+</footer>
+</html>
